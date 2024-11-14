@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src=".vscode/to-do-list-icon-for-your-website-mobile-presentation-and-logo-design-free-vector.jpg" alt="Logo" class="logo"> <!-- โลโก้ของเว็บไซต์ -->
+            <h1>Welcome to the To-Do List App</h1>
+            <p>This app allows you to create a list of tasks, check them off as completed, and stay organized. Simply add a task using the input box below, and manage your list easily!</p>
+        </header>
+
+        <div class="todo-app">
+            <h2>TO-DO List <img src=".vscode/ดาวน์โหลด.jpg" alt="Icon"></h2>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add your text">
+                <button onclick="addTask()">Add</button>
+            </div>
+            <ul id="list-container"> 
+                <!-- Example tasks (can be removed) -->
+                <!--li class="checked">Task1</li>
+                <li>Task2</li>
+                <li>Task3</li-->
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
