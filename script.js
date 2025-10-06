@@ -1,36 +1,17 @@
-const inputBox = document.getElementById("input-box")
-const listContainer = document.getElementById("list-container")
-function addTask(){
-    if(inputBox.value === ''){
-        alert("You must write something!")
-    }
-    else{
-        let li = document.createElement("li");
-        li.innerHTML = inputBox.value;
-        listContainer.appendChild(li);
-        let span = document.createElement("span");
-        span.innerHTML = "\u00d7"
-        li.appendChild(span);
-    }
-    inputBox.value = "";
-    saveData()
-}
+const btn = document.getElementById("btnSurprise");
+const secret = document.getElementById("secret");
 
-listContainer.addEventListener("click",function(e){
-    if(e.target.tagName ==="LI"){
-        e.target.classList.toggle("checked");
-        saveData()
-    }
-    else if(e.target.tagName === "SPAN"){
-        e.target.parentElement.remove();
-        saveData()
-    }
-}, false);
+btn.addEventListener("click", () => {
+  secret.classList.toggle("hidden");
 
-function saveData(){
-    localStorage.setItem("data",listContainer.innerHTML);
-}
-function showTask(){
-    listContainer.innerHTML = localStorage.getItem("data");
-}
-showTask()
+  // ปล่อย confetti กระจายทั่วจอ
+  const end = Date.now() + 1000;
+  (function frame() {
+    confetti({
+      particleCount: 8,
+      spread: 80,
+      origin: { x: Math.random(), y: Math.random() * 0.5 }
+    });
+    if (Date.now() < end) requestAnimationFrame(frame);
+  })();
+});
