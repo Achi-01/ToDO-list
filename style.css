@@ -13,7 +13,7 @@ body, html {
 .container {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(135deg,#9a089f,#4e085f);
+  background: linear-gradient(135deg,#0254f7,#02adf7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,14 +40,14 @@ body, html {
 }
 
 h1 {
-  color: #4e085f;
+  color: #08345f;
   font-size: 28px;
   margin-bottom: 10px;
 }
 
 p {
   font-size: 18px;
-  color: #333;
+  color: #000000;
   margin-bottom: 20px;
 }
 
@@ -86,7 +86,7 @@ button:hover {
   position: absolute;
   width: 90px;
   height: 120px;
-  background: radial-gradient(ellipse at 50% 40%, #ffd6f3 0%, #ff93e1 60%, #ff66cc 100%);
+  background: radial-gradient(ellipse at 50% 40%, #07e8ec 0%, #0344f6 60%, #0343f3 100%);
   border-radius: 55% 55% 50% 50% / 65% 65% 35% 35%;
   opacity: 0.35;
   filter: blur(1px);
